@@ -434,7 +434,7 @@
 					<div class="swiper-wrapper">
 						<!-- ap_block-info__slider_inmo -->
 						<div class="swiper-slide row ap_block-info__slider_inmo align-items-center">
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="-1600">
 								<article>
 									<p class="up-title">
 										Nuestros servicios como administradores de fincas
@@ -450,7 +450,7 @@
 									</div>
 								</article>
 							</div>
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="-1200">
 								<div class="block-picture">
 									<picture>
 										<source srcset="img/home-info/mobile/2.jpg" media="(max-width: 767px)">
@@ -463,7 +463,7 @@
 						<!-- /ap_block-info__slider_inmo -->
 						<!-- ap_block-info__slider_inmo -->
 						<div class="swiper-slide row ap_block-info__slider_inmo align-items-center">
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="1200">
 								<article>
 									<p class="up-title">
 										Nuestros servicios como administradores de fincas
@@ -479,7 +479,7 @@
 									</div>
 								</article>
 							</div>
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="-1600">
 								<div class="block-picture">
 									<picture>
 										<source srcset="img/home-info/mobile/2.jpg" media="(max-width: 767px)">
@@ -504,7 +504,7 @@
 					<div class="swiper-wrapper">
 						<!-- ap_block-info__slider_inmo -->
 						<div class="swiper-slide row ap_block-info__slider_inmo align-items-center">
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="-1600">
 								<div class="block-picture">
 									<picture>
 										<source srcset="img/home-info/mobile/3.jpg" media="(max-width: 767px)">
@@ -513,7 +513,7 @@
 									</picture>
 								</div>
 							</div>
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="-1200">
 								<article>
 									<p class="up-title">
 										Nuestros servicios de gestión de patrimonio
@@ -533,7 +533,7 @@
 						<!-- /ap_block-info__slider_inmo -->
 						<!-- ap_block-info__slider_inmo -->
 						<div class="swiper-slide row ap_block-info__slider_inmo align-items-center">
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="-1600">
 								<div class="block-picture">
 									<picture>
 										<source srcset="img/home-info/mobile/3.jpg" media="(max-width: 767px)">
@@ -542,7 +542,7 @@
 									</picture>
 								</div>
 							</div>
-							<div class="col-6">
+							<div class="col-6" data-swiper-parallax-opacity="0" data-swiper-parallax="1200">
 								<article>
 									<p class="up-title">
 										Nuestros servicios de gestión de patrimonio
@@ -979,6 +979,7 @@
 	<!-- <script type="text/javascript" src="js/slick.js"></script> -->
 	<script>
 		const swiper = new Swiper('.swiper', {
+		  speed: 1600,
 		  slidesPerView: 4,
 		  spaceBetween: 28,
 		  // Optional parameters
@@ -1021,6 +1022,8 @@
 
 		const swiperInfo = new Swiper('.ap_block-info_swiper', {
 		  slidesPerView: 1,
+		  speed: 1600,
+		  parallax: true,
 		  spaceBetween: 167,
 		  // Optional parameters
 		  // grid: {
