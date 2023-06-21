@@ -189,6 +189,7 @@
 							<picture>
 								<source srcset="img/home-banner/mobile/banner.png" media="(max-width: 767px)">
 								<source srcset="img/home-banner/table/banner.png" media="(max-width: 1024px)">
+								<source srcset="img/home-banner/1100-banner.png" media="(max-width: 1120px)">
 								<img src="img/home-banner/banner.png" alt="">
 							</picture>
 						</div>
@@ -982,6 +983,12 @@
 		  speed: 1600,
 		  slidesPerView: 4,
 		  spaceBetween: 28,
+		  breakpoints: {
+		  	1120: {
+		  		slidesPerView: 4,
+		  		spaceBetween: 15
+		  	}
+		  },
 		  // Optional parameters
 		  // grid: {
 		  // 	column: 2
