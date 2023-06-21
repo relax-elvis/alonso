@@ -27,7 +27,7 @@
 	<header>
 		<div class="container">
 			<div class="row">
-				<div class="col-6">
+				<div class="col-xl-6 col-lg-5">
 					<a class="ap_logotype" href="#">
 						<img src="img/logotype.png" alt="">
 					</a>
@@ -35,7 +35,7 @@
 						<img src="img/logotype-blue.png" alt="">
 					</a>
 				</div>
-				<div class="col-6 d-flex">
+				<div class="col-xl-6 col-lg-7 d-flex">
 					<!-- nav -->
 					<nav id="menu">
 						<div class="line">
@@ -369,7 +369,7 @@
 				<div class="row block-padding ap_block-info_one">
 					<!-- ap_block-info__slider_inmo -->
 					<div class="ap_block-info__slider_inmo align-items-center">
-						<div class="col-6">
+						<div class="col-6 col-md-12">
 							<div class="block-picture">
 								<picture>
 									<source srcset="img/home-info/mobile/1.jpg" media="(max-width: 767px)">
@@ -378,52 +378,55 @@
 								</picture>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-6 col-md-12">
 							<article>
 								<h3 class="title">
 									¿porqué elegirnos como su gestor inmobiliario?
 								</h3>
-								<p>
-									Somos una empresa especializada en administración y gestión de fincas situada en Barcelona, que a través de sus valores busca construir confianza entre nuestra empresa y los clientes.
-								</p>
-								<p>
-									Trabajando día a día para ofrecer el máximo grado de profesionalidad, integridad y dedicación.
-								</p>
-								<ul class="list-icon">
-									<li>
-										<div class="image">
-											<img src="img/icon/icon-blue-benefit-1.png" alt="">
-										</div>
+								<div class="block-table">
+									<div class="left">
 										<p>
-											<strong>Amplia experiencia</strong> en el sector
+											Somos una empresa especializada en administración y gestión de fincas situada en Barcelona, que a través de sus valores busca construir confianza entre nuestra empresa y los clientes.
 										</p>
-									</li>
-									<li>
-										<div class="image">
-											<img src="img/icon/icon-blue-benefit-2.png" alt="">
-										</div>
 										<p>
-											<strong>Asesoramiento </strong>personalizado
+											Trabajando día a día para ofrecer el máximo grado de profesionalidad, integridad y dedicación.
 										</p>
-									</li>
-									<li>
-										<div class="image">
-											<img src="img/icon/icon-blue-benefit-3.png" alt="">
-										</div>
-										<p>
-											<strong>Especialistas</strong> en administración, gestión inmobiliaria y de fincas
-										</p>
-									</li>
-									<li>
-										<div class="image">
-											<img src="img/icon/icon-blue-benefit-4.png" alt="">
-										</div>
-										<p>
-											<strong>Multitud de servicios</strong> complementarios como fiscales, reformas, gestión de venta…
-										</p>
-									</li>
-								</ul>
-
+									</div>
+									<ul class="list-icon">
+										<li>
+											<div class="image">
+												<img src="img/icon/icon-blue-benefit-1.png" alt="">
+											</div>
+											<p>
+												<strong>Amplia experiencia</strong> en el sector
+											</p>
+										</li>
+										<li>
+											<div class="image">
+												<img src="img/icon/icon-blue-benefit-2.png" alt="">
+											</div>
+											<p>
+												<strong>Asesoramiento </strong>personalizado
+											</p>
+										</li>
+										<li>
+											<div class="image">
+												<img src="img/icon/icon-blue-benefit-3.png" alt="">
+											</div>
+											<p>
+												<strong>Especialistas</strong> en administración, gestión inmobiliaria y de fincas
+											</p>
+										</li>
+										<li>
+											<div class="image">
+												<img src="img/icon/icon-blue-benefit-4.png" alt="">
+											</div>
+											<p>
+												<strong>Multitud de servicios</strong> complementarios como fiscales, reformas, gestión de venta…
+											</p>
+										</li>
+									</ul>
+								</div>
 							</article>
 						</div>
 					</div>
@@ -980,46 +983,46 @@
 	<!-- <script type="text/javascript" src="js/slick.js"></script> -->
 	<script>
 		const swiper = new Swiper('.swiper', {
-		  speed: 1600,
-		  slidesPerView: 4,
-		  spaceBetween: 28,
-		  breakpoints: {
-		  	1120: {
-		  		slidesPerView: 4,
-		  		spaceBetween: 15
-		  	}
-		  },
-		  // Optional parameters
-		  // grid: {
-		  // 	column: 2
-		  // },
-		  // direction: 'horizontal',
-		  loop: false,
-
-		 
-		  // If we need pagination
-		  pagination: {
-		  	type: "fraction",
-			formatFractionCurrent: function(number) {
-				return (number <=9) ? `0${number}` : number;
-				
+			slidesPerView: 1,
+			spaceBetween: 28,
+			speed: 1600,
+			loop: false,
+			pagination: {
+			  	type: "fraction",
+				formatFractionCurrent: function(number) {
+					return (number <=9) ? `0${number}` : number;
+					
+				},
+				formatFractionTotal: function(number) {
+					return (number <=9) ? `0${number}` : number;
+				},
+				renderFraction: function (currentClass, totalClass) {
+					return '<span class="' + currentClass + '"></span>' +
+					'<span class="' + totalClass + '"></span>';
+				},
+			    el: '.swiper-pagination',
 			},
-			formatFractionTotal: function(number) {
-				return (number <=9) ? `0${number}` : number;
-			},
-			renderFraction: function (currentClass, totalClass) {
-				return '<span class="' + currentClass + '"></span>' +
-				'<span class="' + totalClass + '"></span>';
-			},
-		    el: '.swiper-pagination',
-		  },
 
 
-		  // Navigation arrows
-		  navigation: {
-		    nextEl: '.swiper-button-next',
-		    prevEl: '.swiper-button-prev',
-		  },
+			// Navigation arrows
+			navigation: {
+			  nextEl: '.swiper-button-next',
+			  prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				834: {
+					slidesPerView: 2.85,
+					spaceBetween: 25
+				},
+				1024: {
+					slidesPerView: 2.77,
+					spaceBetween: 25
+				},
+				1120: {
+					slidesPerView: 4,
+					spaceBetween: 15
+				}
+			},
 
 		  // And if we need scrollbar
 		  // scrollbar: {
