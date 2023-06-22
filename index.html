@@ -731,56 +731,64 @@
 					<div class="col-12">
 						<!-- ap_footer__top__clients -->
 						<div class="ap_footer__top__clients">
-							<!-- item -->
-							<div class="item">
-								<div class="cl-logo">
-									<img src="img/client-logo/1.png" alt="">
+							<div class="swiper-wrapper">
+								<!-- item -->
+								<div class="item swiper-slide">
+									<div class="cl-logo">
+										<img src="img/client-logo/1.png" alt="">
+									</div>
+									<p>
+										Col·legi d'administradors de finques de Barcelona- Lleida
+									</p>
 								</div>
-								<p>
-									Col·legi d'administradors de finques de Barcelona- Lleida
-								</p>
-							</div>
-							<!-- /item -->
-							<!-- item -->
-							<div class="item">
-								<div class="cl-logo">
-									<img src="img/client-logo/2.png" alt="">
+								<!-- /item -->
+								<!-- item -->
+								<div class="item swiper-slide">
+									<div class="cl-logo">
+										<img src="img/client-logo/2.png" alt="">
+									</div>
+									<p>
+										Col·legi oficial d'agents de la propietat immobiliària de Barcelona
+									</p>
 								</div>
-								<p>
-									Col·legi oficial d'agents de la propietat immobiliària de Barcelona
-								</p>
-							</div>
-							<!-- /item -->
-							<!-- item -->
-							<div class="item">
-								<div class="cl-logo">
-									<img src="img/client-logo/3.png" alt="">
+								<!-- /item -->
+								<!-- item -->
+								<div class="item swiper-slide">
+									<div class="cl-logo">
+										<img src="img/client-logo/3.png" alt="">
+									</div>
+									<p>
+										Asociación de promotores de constructores de España
+									</p>
 								</div>
-								<p>
-									Asociación de promotores de constructores de España
-								</p>
-							</div>
-							<!-- /item -->
-							<!-- item -->
-							<div class="item">
-								<div class="cl-logo">
-									<img src="img/client-logo/4.png" alt="">
+								<!-- /item -->
+								<!-- item -->
+								<div class="item swiper-slide">
+									<div class="cl-logo">
+										<img src="img/client-logo/4.png" alt="">
+									</div>
+									<p>
+										Il·lustre col·legi d'advocats de Barcelona
+									</p>
 								</div>
-								<p>
-									Il·lustre col·legi d'advocats de Barcelona
-								</p>
-							</div>
-							<!-- /item -->
-							<!-- item -->
-							<div class="item">
-								<div class="cl-logo">
-									<img src="img/client-logo/5.png" alt="">
+								<!-- /item -->
+								<!-- item -->
+								<div class="item swiper-slide">
+									<div class="cl-logo">
+										<img src="img/client-logo/5.png" alt="">
+									</div>
+									<p>
+										Col·legi d'arquitectes de catalunya
+									</p>
 								</div>
-								<p>
-									Col·legi d'arquitectes de catalunya
-								</p>
+								<!-- /item -->
 							</div>
-							<!-- /item -->
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
 						</div>
 						<!-- /ap_footer__top__clients -->
 					</div>
@@ -1066,6 +1074,63 @@
 		    nextEl: '.swiper-button-next',
 		    prevEl: '.swiper-button-prev',
 		  },
+
+		  // And if we need scrollbar
+		  // scrollbar: {
+		  //   el: '.swiper-scrollbar',
+		  // },
+		});
+
+		const swiperBlog = new Swiper('.ap_footer__top__clients', {
+		  slidesPerView: 5,
+		  speed: 1600,
+		  parallax: true,
+		  spaceBetween: 20,
+		  // Optional parameters
+		  // grid: {
+		  // 	column: 2
+		  // },
+		  // direction: 'horizontal',
+		  loop: false,
+
+		 
+		  // If we need pagination
+		  pagination: {
+		  	type: "fraction",
+			formatFractionCurrent: function(number) {
+				return (number <=9) ? `0${number}` : number;
+				
+			},
+			formatFractionTotal: function(number) {
+				return (number <=9) ? `0${number}` : number;
+			},
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' +
+				'<span class="' + totalClass + '"></span>';
+			},
+		    el: '.swiper-pagination',
+		  },
+
+
+		  // Navigation arrows
+		  navigation: {
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
+		  },
+			breakpoints: {
+				834: {
+					slidesPerView: 3.1,
+					spaceBetween: 20
+				},
+				1024: {
+					slidesPerView: 3.1,
+					spaceBetween: 20
+				},
+				1120: {
+					slidesPerView: 5,
+					spaceBetween: 15
+				}
+			},
 
 		  // And if we need scrollbar
 		  // scrollbar: {
