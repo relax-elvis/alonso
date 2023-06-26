@@ -174,6 +174,30 @@ $(document).ready(function() {
 	// 	}
 	// });
 
+
+	$('#btn-menu').click(function() {
+		$('#btn-menu-content').fadeIn();
+	});
+	$('#btn-menu-content .close-btn').click(function() {
+		$('#btn-menu').removeClass('active');
+		$('#btn-menu-content').fadeOut();
+	});
+
+	if($(window).width() < 767) {
+		$('div').removeAttr('data-swiper-parallax-opacity');
+		$('div').removeAttr('data-swiper-parallax');
+		
+	}
+
+	$('#btn-menu-content nav .link-submenu').on('click', function(e) {
+		e.preventDefault();
+		if($(this).is('.active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+		}
+	})
+
 	if($(this).scrollTop() > 100) {
 		$('header').addClass("fixed-menu");
 	}
