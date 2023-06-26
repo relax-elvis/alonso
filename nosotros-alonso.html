@@ -138,7 +138,7 @@
 					<div class="col-12">
 						<!-- ap_block-info__slider_inmo -->
 						<div class="row ap_block-info__slider_inmo align-items-center">
-							<div class="col-6 col-md-12">
+							<div class="col-lg-6 col-md-12">
 								<article class="max-width-600">
 									<h3>
 										Breve historía ipsum dolor sit amet, consectetur elit
@@ -151,10 +151,10 @@
 									</p>
 								</article>
 							</div>
-							<div class="col-6 col-md-12">
+							<div class="col-lg-6 col-md-12">
 								<div class="block-picture">
 									<picture>
-										<source srcset="img/nosotros-page/info-1.jpg" media="(max-width: 767px)">
+										<source srcset="img/nosotros-page/mobile/info-1.jpg" media="(max-width: 767px)">
 										<source srcset="img/nosotros-page/table/info-1.jpg" media="(max-width: 1024px)">
 										<img src="img/nosotros-page/info-1.jpg" alt="">
 									</picture>
@@ -170,16 +170,16 @@
 					<!-- ap_block-info__slider_inmo -->
 					<div class="col-12">
 						<div class="row ap_block-info__slider_inmo align-items-center">
-							<div class="col-6">
+							<div class="col-lg-6 col-md-12">
 								<div class="block-picture after-layer">
 									<picture>
-										<source srcset="img/nosotros-page/info-2.jpg" media="(max-width: 767px)">
-										<source srcset="img/nosotros-page/info-2.jpg" media="(max-width: 1024px)">
+										<source srcset="img/nosotros-page/mobile/info-2.jpg" media="(max-width: 767px)">
+										<source srcset="img/nosotros-page/table/info-2.jpg" media="(max-width: 1024px)">
 										<img src="img/nosotros-page/info-2.jpg" alt="">
 									</picture>
 								</div>
 							</div>
-							<div class="col-6">
+							<div class="col-lg-6 col-md-12">
 								<article class="max-width-585">
 									<div class="block-quote">
 										<h3>
@@ -226,12 +226,12 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="row ap_custom-list__info">
-							<div class="col-6">
+							<div class="col-lg-6 col-md-12">
 								<h3>
 									Equipo Humano y cercano
 								</h3>
 							</div>
-							<div class="col-6">
+							<div class="col-lg-6 col-md-12">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor orci sit amet erat commodo pulvinar. Donec
 								</p>
@@ -668,6 +668,66 @@
 		    nextEl: '.swiper-button-next',
 		    prevEl: '.swiper-button-prev',
 		  },
+
+		  // And if we need scrollbar
+		  // scrollbar: {
+		  //   el: '.swiper-scrollbar',
+		  // },
+		});
+		const swiperBlog = new Swiper('.ap_footer__top__clients', {
+		  slidesPerView: 5,
+		  speed: 1600,
+		  parallax: true,
+		  spaceBetween: 20,
+		  // Optional parameters
+		  // grid: {
+		  // 	column: 2
+		  // },
+		  // direction: 'horizontal',
+		  loop: false,
+
+		 
+		  // If we need pagination
+		  pagination: {
+		  	type: "fraction",
+			formatFractionCurrent: function(number) {
+				return (number <=9) ? `0${number}` : number;
+				
+			},
+			formatFractionTotal: function(number) {
+				return (number <=9) ? `0${number}` : number;
+			},
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' +
+				'<span class="' + totalClass + '"></span>';
+			},
+		    el: '.swiper-pagination',
+		  },
+
+
+		  // Navigation arrows
+		  navigation: {
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
+		  },
+			breakpoints: {
+				200: {
+					slidesPerView: 1.495,
+					spaceBetween: 20
+				},
+				834: {
+					slidesPerView: 3.1,
+					spaceBetween: 20
+				},
+				1024: {
+					slidesPerView: 3.1,
+					spaceBetween: 20
+				},
+				1120: {
+					slidesPerView: 5,
+					spaceBetween: 15
+				}
+			},
 
 		  // And if we need scrollbar
 		  // scrollbar: {
