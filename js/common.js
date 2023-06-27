@@ -239,22 +239,37 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.ow_tab .item .tab-title').click(function() {
-		const _this = $(this);
-		if(_this.hasClass('active')) {
-			_this.parents('.ow_tab').find('.tab-title').removeClass('active');
-			_this.parents('.ow_tab').find('.tab-title .icon-plus').text('+');
-		} else {
-			_this.parents('.ow_tab').find('.tab-title').removeClass('active');
-			_this.parents('.ow_tab').find('.tab-title .icon-plus').text('+');
-			_this.find('.icon-plus').text('-');
-			_this.addClass('active');
-		}
-	});
+	// $('.ow_tab .item .tab-title').click(function() {
+	// 	const _this = $(this);
+	// 	if(_this.hasClass('active')) {
+	// 		_this.parents('.ow_tab').find('.tab-title').removeClass('active');
+	// 		_this.parents('.ow_tab').find('.tab-title .icon-plus').text('+');
+	// 	} else {
+	// 		_this.parents('.ow_tab').find('.tab-title').removeClass('active');
+	// 		_this.parents('.ow_tab').find('.tab-title .icon-plus').text('+');
+	// 		_this.find('.icon-plus').text('-');
+	// 		_this.addClass('active');
+	// 	}
+	// });
 
-	lightGallery(document.querySelector('.ow_map .map'), {
-		thumbnail: true,
-	});
+	// lightGallery(document.querySelector('.ow_map .map'), {
+	// 	thumbnail: true,
+	// });
+
+	const allBlockPicture = $('.ap_block-info.system-duplck .swiper-slide-active .block-picture');
+	
+	for(let i = 0; i < allBlockPicture.length; i++) {
+		const item = allBlockPicture[i];
+
+		const left = $(item).position().left;
+		const leftImg = $(item).find('img').position().left;
+
+		const width = $(item).find('img').width();
+		const pagiWidth = $(item).parents('.ap_block-info_swiper').find('.swiper-pagination').width();
+		const position = (((left + leftImg) + width) - pagiWidth);
+
+		$(item).parents('.ap_block-info_swiper').find('.swiper-pagination').css('left', position + 'px');
+	}
 
 	// $('.ow_photo__slider').slick({
 	// 	dots: true,
