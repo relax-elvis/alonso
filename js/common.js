@@ -275,6 +275,13 @@ $(document).ready(function() {
 		const position = (((left + leftImg) + width) - pagiWidth);
 
 		$(item).parents('.ap_block-info_swiper').find('.swiper-pagination').css('left', position + 'px');
+		
+		if($(window).width() < 768) {
+			const height = allBlockPicture.height();
+			const heightPag = $(item).parents('.ap_block-info_swiper').find('.swiper-pagination').outerHeight();
+			const top = (height - heightPag);
+			$(item).parents('.ap_block-info_swiper').find('.swiper-pagination').css('top', top + 'px');
+		}
 	}
 
 	// $('.ow_photo__slider').slick({
