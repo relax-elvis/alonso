@@ -174,6 +174,17 @@ $(document).ready(function() {
 	// 	}
 	// });
 
+	$('header #menu .block-menu > .item > .link').hover(function() {
+		const menuLinkPos = $(this).offset().left;
+		// console.log($(this).parents('.item').find('submenu'));
+		if($(this).parents('.item').find('.submenu').length > 0) {
+			const widthLinkMenu = $(this).outerWidth();
+			const widthSubmenu = $(this).parents('.item').find('.submenu').outerWidth();
+			const resultLeft = ((menuLinkPos - (widthSubmenu/2)) + (widthLinkMenu/2));
+			console.log($(this).parents('.item').find('.submenu').length);
+			$(this).parents('.item').find('.submenu').css('left', resultLeft + 'px');
+		}
+	});
 
 	$('#btn-menu').click(function() {
 		$('#btn-menu-content').fadeIn();
