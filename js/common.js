@@ -188,10 +188,16 @@ $(document).ready(function() {
 
 	$('#btn-menu').click(function() {
 		$('#btn-menu-content').fadeIn();
+		$('#btn-menu-content .block-contnt').animate({
+			width: '100%'
+		}, 500);
 	});
 	$('#btn-menu-content .close-btn').click(function() {
 		$('#btn-menu').removeClass('active');
 		$('#btn-menu-content').fadeOut();
+		$('#btn-menu-content .block-contnt').animate({
+			width: '0'
+		}, 500)
 	});
 
 	if($(window).width() < 767) {
