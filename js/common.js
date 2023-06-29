@@ -226,7 +226,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('header nav a[href^="#"]').click(function(e) {
+	$('header nav a[href^="#"], .go-form').click(function(e) {
 		e.preventDefault();
 		var __this;
 		if($(this)[0].nodeName == 'BUTTON') {
