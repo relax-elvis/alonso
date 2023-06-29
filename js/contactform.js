@@ -13,7 +13,7 @@ $("form").validate({
 			required: true,
 			email: true
 		},
-		check_form: {
+		accept: {
 			required: true
 		}
 	},
@@ -24,13 +24,13 @@ $("form").validate({
 	}
 });
 
-$("form input[name='check_form']").change(function() {
+$("form input[name='accept']").change(function() {
 	$(this).removeClass('error');
 });
 $('#contactForm').submit(function(e){
 	e.preventDefault();
-	if($("form input[name='check_form']").prop("checked") === false) {
-		$("form input[name='check_form']").addClass('error');
+	if($("form input[name='accept']").prop("checked") === false) {
+		$("form input[name='accept']").addClass('error');
 	} else {
 		if($("form").valid() === true) {
 			$.ajax({
