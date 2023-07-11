@@ -284,6 +284,16 @@ $(document).ready(function() {
 		}
 	}
 
+	$('footer #lang .item').click(function(e) {
+		e.preventDefault();
+		if($(this).is('.active')) {
+			return false;
+		} else {
+			$('footer #lang .item').removeClass('active');
+			$(this).addClass('active');
+		}
+	})
+
 	// $('.ow_photo__slider').slick({
 	// 	dots: true,
 	// 	infinite: false,
