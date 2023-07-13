@@ -272,7 +272,7 @@ $(document).ready(function() {
 
 		const width = $(item).find('img').width();
 		const pagiWidth = $(item).parents('.ap_block-info_swiper').find('.swiper-pagination').width();
-		const position = (((left + leftImg) + width) - pagiWidth);
+		const position = (((left + leftImg) + width) - pagiWidth) - 3;
 
 		$(item).parents('.ap_block-info_swiper').find('.swiper-pagination').css('left', position + 'px');
 		
